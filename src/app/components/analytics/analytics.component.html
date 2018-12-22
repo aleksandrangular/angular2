@@ -1,0 +1,32 @@
+<div class="analytics">
+    <h1 class="page__title">
+        Аналітика
+    </h1>
+    <h2 class="analytics__title">
+        Динаміка споживання енергії на душу населення в різних країнах
+    </h2>
+    <table mat-table [dataSource]="dataSource" class="analytics__table mat-elevation-z8">
+        <ng-container matColumnDef="country">
+            <th class="analytics__title-head" mat-header-cell *matHeaderCellDef> Країна, група країн </th>
+            <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+        </ng-container>
+        <ng-container matColumnDef="oil">
+            <th class="analytics__title-head" mat-header-cell *matHeaderCellDef> Нафти,т, на душу населення </th>
+            <td mat-cell *matCellDef="let element"> {{element.oil}} </td>
+        </ng-container>
+        <ng-container matColumnDef="elenergy">
+            <th class="analytics__title-head" mat-header-cell *matHeaderCellDef> Електрична енергія, кВт*год на душу населення </th>
+            <td mat-cell *matCellDef="let element"> {{element.elenergy}} </td>
+        </ng-container>
+        <ng-container matColumnDef="growth">
+            <th class="analytics__title-head" mat-header-cell *matHeaderCellDef> Середньогодовий темп приросту споживання е/енергії в 2001 - 2020 р., % (прогноз) </th>
+            <td mat-cell *matCellDef="let element"> {{element.growth}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+
+
+
