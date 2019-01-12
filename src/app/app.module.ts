@@ -18,6 +18,7 @@ import { NewsComponent } from './components/news/news.component';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { ComletedProjectsComponent } from './components/comleted-projects/comleted-projects.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import {HeaderComponent} from './components/header/header.component';
 
 
 const appRoutes: Routes = [
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     NewsComponent,
     AnalyticsComponent,
     ComletedProjectsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
